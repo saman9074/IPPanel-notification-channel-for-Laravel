@@ -40,7 +40,7 @@ class IppanelChannel
         }
 
         // Ensure $to is an array.
-        $to = Arr::wrap($to); // Use Arr::wrap to convert to array if necessary.
+        //$to = Arr::wrap($to); // Use Arr::wrap to convert to array if necessary.
 
         // Get configuration from the package's config file.
         $apiKey = config('ippanel.api_key');
@@ -62,9 +62,10 @@ class IppanelChannel
         // Prepare the request body based on whether it's a simple text message or pattern-based.
         // The parameter names and structure MUST exactly match the IPPanel API documentation.
         $requestBody = [
-            'recipient' => $to, // Array of recipient numbers
-            'sender' => $senderNumber, // Sender number
+            'recipient' => $to, // Array of recipient numbers            
         ];
+
+        $requestBody['sender'] = $senderNumber; // Sender number
 
         if ($message->isPatternBased()) {
              // Prepare data for pattern-based SMS.
