@@ -35,7 +35,7 @@ class IppanelChannelTest extends TestCase
     {
         // Set up IPPanel configuration for testing.
         // These values will be used by the channel class.
-        $app['config']->set('ippanel.api_key', 'OWVkYjg3ZjUtY2IzMi00MDFhLTgwNzYtMTU1Yzg3MmYwY2NhOTcxZTA2NTliNjNmOTNlODY4NWNmMTdiOTRhMjg1MzE='); // Using a generic test key here
+        $app['config']->set('ippanel.api_key', 'OWVkYjg3ZTcxZTA2NTliNjNmOTNlODY4NWNmMTdiOTRhMjg1MzE='); // Using a generic test key here
         // Set a test sender number in the config.
         $app['config']->set('ippanel.sender_number', '3000505');
         // Use the ACTUAL IPPanel base endpoint for testing, as we will mock requests to it.
