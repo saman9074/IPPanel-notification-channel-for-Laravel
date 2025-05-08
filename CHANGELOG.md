@@ -1,7 +1,7 @@
 # Changelog
 
-All notable changes to `:package_name` will be documented in this file
+All notable changes to IPPanel notification channel for Laravel will be documented in this file
 
-## 1.0.0 - 201X-XX-XX
+## [1.0.0] - 2023-10-27
 
-- initial release
+- Initial release of the Laravel IPPanel Notification Channel package.

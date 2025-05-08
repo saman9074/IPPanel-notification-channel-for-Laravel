@@ -1,33 +1,35 @@
 {
-    "name": "laravel-notification-channels/:package_name",
-    "description": ":package_description",
-    "homepage": "https://github.com/laravel-notification-channels/:package_name",
+    "name": "laravel-notification-channels/ippanel",
+    "description": "IPPanel (Iran SMS Service) notification channel for Laravel",
+    "homepage": "https://github.com/laravel-notification-channels/ippanel",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_website",
+            "name": "Ali Abdi",
+            "email": "abdi9074@gmail.com",
+            "homepage": "https://github.com/saman9074",
             "role": "Developer"
         }
     ],
     "require": {
         "php": ">=8.1",
         "illuminate/notifications": "~10.0 || ~11.0",
-        "illuminate/support": "~10.0 || ~11.0"
+        "illuminate/support": "~10.0 || ~11.0",
+        "guzzlehttp/guzzle": "^7.0"
     },
     "require-dev": {
         "mockery/mockery": "^1.0",
-        "phpunit/phpunit": "^10.0"
+        "phpunit/phpunit": "^10.0",
+        "orchestra/testbench": "^8.0 || ^9.0"
     },
     "autoload": {
         "psr-4": {
-            "NotificationChannels\\:channel_namespace\\": "src"
+            "NotificationChannels\\Ippanel\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NotificationChannels\\:channel_namespace\\Test\\": "tests"
+            "NotificationChannels\\Ippanel\\Test\\": "tests/"
         }
     },
     "scripts": {
@@ -36,5 +38,14 @@
     },
     "config": {
         "sort-packages": true
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotificationChannels\\Ippanel\\IppanelNotificationChannelServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
