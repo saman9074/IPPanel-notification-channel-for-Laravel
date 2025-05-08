@@ -97,7 +97,7 @@ class IppanelChannel
             $response = Http::withHeaders([
                 // Add headers required by IPPanel, e.g., Authorization header with API Key.
                 // This header structure MUST match the Swagger documentation.
-                'Authorization' => 'ApiKey ' . $apiKey, // Common example, VERIFY THIS.
+                'ApiKey' => $apiKey, // Common example, VERIFY THIS.
                 'Content-Type' => 'application/json', // Or 'application/x-www-form-urlencoded', VERIFY THIS.
                 'Accept' => 'application/json', // Usually for expecting JSON response.
             ])->post($apiEndpoint, $requestBody);
