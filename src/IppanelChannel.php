@@ -54,7 +54,7 @@ class IppanelChannel
         // Determine the specific endpoint based on message type (simple or pattern).
         // Based on Swagger for simple send: /sms/send/webservice/single
         // You MUST verify the pattern send path from the Swagger documentation.
-        $apiPath = $message->isPatternBased() ? '/messages/patterns/send' : '/sms/send/webservice/single'; // Updated simple send path
+        $apiPath = $message->isPatternBased() ? '/sms/pattern/normal/send' : '/sms/send/webservice/single'; // Updated simple send path
 
         $apiEndpoint = rtrim($baseEndpoint, '/') . '/' . ltrim($apiPath, '/');
 
