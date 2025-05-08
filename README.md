@@ -23,13 +23,32 @@ This package makes it easy to send notifications using [IPPanel SMS service](htt
 * [License](#license)
 
 ## Installation
+(important)
+Because the package is not currently released on Packagist, please use the second method.
 
-You can install the package via composer:
+1- You can install the package via composer:
 
 ```bash
 composer require your-vendor-name/laravel-ippanel-notification-channel
 ```
 
+2- Install via GitHub (Before publishing to Packagist or for development):
+If the package is not yet published on Packagist, or for testing/development purposes, you can install it directly from GitHub.
+
+First, add the repository definition to your project's composer.json file under the repositories section:
+
+```bash
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "[https://github.com/saman9074/IPPanel-notification-channel-for-Laravel](https://github.com/saman9074/IPPanel-notification-channel-for-Laravel)"
+    }
+],
+```
+Then, require the package using its GitHub repository name:
+```bash
+composer require saman9074/ippanel-notification-channel-for-laravel
+```
 ## Configuration
 
 You can publish the config file with:
