@@ -69,8 +69,8 @@ class IppanelChannel
         if ($message->isPatternBased()) {
              // Prepare data for pattern-based SMS.
              // Verify parameter names like 'pattern_code' and 'variables' from Swagger.
-             $requestBody['pattern_code'] = $message->patternCode;
-             $requestBody['variables'] = $message->variables; // Should be an array like ['name' => 'value']
+             $requestBody['code'] = $message->patternCode;
+             $requestBody['variable'] = $message->variables; // Should be an array like ['name' => 'value']
              // Add any other parameters required by IPPanel's pattern API (e.g., 'type' => 'pattern').
              // Example (verify with docs): $requestBody['type'] = 'pattern';
         } else {
@@ -97,7 +97,7 @@ class IppanelChannel
             $response = Http::withHeaders([
                 // Add headers required by IPPanel, e.g., Authorization header with API Key.
                 // This header structure MUST match the Swagger documentation.
-                'ApiKey' => $apiKey, // Common example, VERIFY THIS.
+                'Authorization' => 'ApiKey ' . $apiKey, // Common example, VERIFY THIS.
                 'Content-Type' => 'application/json', // Or 'application/x-www-form-urlencoded', VERIFY THIS.
                 'Accept' => 'application/json', // Usually for expecting JSON response.
             ])->post($apiEndpoint, $requestBody);
