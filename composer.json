@@ -13,14 +13,14 @@
     ],
     "require": {
         "php": ">=8.2",
-        "illuminate/notifications": "~10.0 || ~11.0",
-        "illuminate/support": "~10.0 || ~11.0 || ~12.0",
+        "illuminate/notifications": "^10.0 || ^11.0 || ^12.0",
+        "illuminate/support": "^10.0 || ^11.0 || ^12.0",
         "guzzlehttp/guzzle": "^7.0"
     },
     "require-dev": {
         "mockery/mockery": "^1.6",
         "phpunit/phpunit": "^11.5.3",
-        "orchestra/testbench": "^8.0 || ^9.0"
+        "orchestra/testbench": "^8.0 || ^9.0 || ^10.0"
     },
     "autoload": {
         "psr-4": {
